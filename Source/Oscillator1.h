@@ -9,7 +9,7 @@
  
  Inherits from WaveGeneratorVoice.
  Oscilator 1, creates sine wave adds it to the audio buffer.
-  ==============================================================================
+  =============================================================================
 */
 //                              References
 ///                          (David-Badiane, 2020)

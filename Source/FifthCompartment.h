@@ -40,7 +40,7 @@ private:
     BastowSynthAudioProcessor& audioProcessor;
     
     
-    //==============================================================================
+    //=============================================================================
                                 //ComboBox connection
     //==============================================================================
     std::unique_ptr <juce::AudioProcessorValueTreeState::ComboBoxAttachment> filterTypeVal;

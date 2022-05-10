@@ -28,7 +28,7 @@ void Freq7LAF::drawLinearSlider (juce::Graphics& g, int x, int y, int width, int
 {
     //==============================================================================
                                             //Creates BackgroundTrack for Slider
-    //==============================================================================
+    //=============================================================================
     g.setColour (juce::Colours::ghostwhite.darker(0.075f));
 
     auto trackWidthFrequencyBackground7 = juce::jmin (19.5f, (float) height * 10.f );

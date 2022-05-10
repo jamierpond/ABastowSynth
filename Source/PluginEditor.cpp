@@ -6,7 +6,7 @@
                                 Description
  
  Initialises components with the audio Processor, sets the colour for the waveView component, sets size of plugin, sets parameters for keyboard component, makes visible everything that needs to be displayed, grabs image from the folder (images), sets location for components to be placed and repaints the level meter. 
-  ==============================================================================
+  =============================================================================
 */
 //                              References
 //                           (DrBrusin, 2022)

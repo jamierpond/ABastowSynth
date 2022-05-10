@@ -12,7 +12,7 @@
  
  ThirdCompartment has to initialise the plugin processor,
  in order to connect the sliders with the set settings in the parameter layout.
-  ==============================================================================
+  =============================================================================
 */
 //                              References
 //                           (DrBrusin, 2022)

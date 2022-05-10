@@ -28,7 +28,7 @@ audioProcessor(p)
     addAndMakeVisible(&filterMenu);
     //==============================================================================
                                 //filter Menu
-    //==============================================================================
+    //=============================================================================
     
     filterTypeVal = std::make_unique<juce::AudioProcessorValueTreeState::ComboBoxAttachment>(audioProcessor.tree, filterMenuId, filterMenu);
     

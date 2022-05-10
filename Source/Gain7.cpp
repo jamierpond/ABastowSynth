@@ -27,7 +27,7 @@ void Gain7LAF::drawLinearSlider  (juce::Graphics& g, int x, int y, int width, in
 {
 //==============================================================================
     //Creates BackgroundTrack for Slider
-//==============================================================================
+//=============================================================================
 g.setColour (juce::Colours::ghostwhite.darker(5.175f));
 
 auto trackWidthGainBackground7 = juce::jmin (15.5f, (float) height  );

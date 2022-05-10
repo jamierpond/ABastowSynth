@@ -9,7 +9,7 @@
  
  Using Juce functions sets the default settings for any component
  calling the class Rotary Slider.
-  ==============================================================================
+  =============================================================================
 */
 //                              References
 ///                            (Kengo, S., 2021)

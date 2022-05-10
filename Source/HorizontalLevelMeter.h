@@ -11,7 +11,7 @@ Sets the default functions and variables in the class
  Overrides any Pure Virtual Functions.
  
  Setting the range that the plugin editor will repaint
-  ==============================================================================
+  =============================================================================
 */
 //                               References
 ///                           (Akash Murthy, 2021)

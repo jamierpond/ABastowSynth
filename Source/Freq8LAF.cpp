@@ -27,7 +27,7 @@ void Freq8LAF::drawLinearSlider (juce::Graphics& g, int x, int y, int width, int
 
 {   //==============================================================================
                                             //Creates BackgroundTrack for Slider
-    //==============================================================================
+    //=============================================================================
     
     g.setColour (juce::Colours::ghostwhite.darker(0.075f));
 

@@ -26,7 +26,7 @@ void Freq4LAF::drawLinearSlider (juce::Graphics& g, int x, int y, int width, int
                        const juce::Slider::SliderStyle style, juce::Slider& slider)
 
 {
-    //==============================================================================
+    //=============================================================================
                                             //Creates BackgroundTrack for Slider
     //==============================================================================
     g.setColour (juce::Colours::ghostwhite.darker(0.075f));

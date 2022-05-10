@@ -12,7 +12,7 @@
  
  FirstCompartment has to initialise the plugin processor,
  in order to connect the sliders with the set settings in the parameter layout (Plugin Processor CPP line 49).
-  ==============================================================================
+  =============================================================================
 */
 //                              References
 //                           (DrBrusin, 2022)

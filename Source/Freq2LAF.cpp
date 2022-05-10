@@ -26,7 +26,7 @@ void Freq2LAF::drawLinearSlider (juce::Graphics& g, int x, int y, int width, int
                        const juce::Slider::SliderStyle style, juce::Slider& slider)
 
 {
-    //==============================================================================
+    //=============================================================================
                                             //Creates BackgroundTrack for Slider
     //==============================================================================
     

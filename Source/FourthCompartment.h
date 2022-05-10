@@ -59,7 +59,7 @@ private:
 
     //==============================================================================
                                 //APVTS Slider Connection .h
-    //==============================================================================
+    //=============================================================================
     
     std::unique_ptr <juce::AudioProcessorValueTreeState::SliderAttachment> resVal;
     std::unique_ptr <juce::AudioProcessorValueTreeState::SliderAttachment>  cutoffVal;

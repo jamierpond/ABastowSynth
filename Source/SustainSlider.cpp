@@ -36,7 +36,7 @@ void SustainSliderLAF::drawRotarySlider (juce::Graphics& g, int x, int y, int wi
                                           const float rotaryStartAngle, const float rotaryEndAngle, juce::Slider& slider)
 {
     
-    //==============================================================================
+    //=============================================================================
                                     //Rotary Variables
     //==============================================================================
     auto bounds = juce::Rectangle<float> (x, y, width, height).reduced (30.5f);

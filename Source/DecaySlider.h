@@ -9,7 +9,7 @@
  
  Initialises the default functions and variables in the class.
   Overrides any Pure Virtual Functions.
-  ==============================================================================
+  =============================================================================
 */
 //                              References
 ///                            (Kengo, S., 2021)

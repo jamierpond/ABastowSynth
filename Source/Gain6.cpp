@@ -29,7 +29,7 @@ void Gain6LAF::drawLinearSlider  (juce::Graphics& g, int x, int y, int width, in
 {
 //==============================================================================
     //Creates BackgroundTrack for Slider
-//==============================================================================
+//=============================================================================
     
 g.setColour (juce::Colours::ghostwhite.darker(5.175f));
 

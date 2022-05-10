@@ -9,7 +9,7 @@
  
  Using Juce functions sets the default settings for any component
  calling the class Horizontal Slider.
-  ==============================================================================
+  =============================================================================
 */
 //                              References
 ///                            (Kengo, S., 2021)
