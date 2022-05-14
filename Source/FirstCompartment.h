@@ -85,6 +85,9 @@ private:
                      frequencySlider7,
                      frequencySlider8,
                      originalFreq;
+    
+    constexpr static int numFreqSliders = 9;
+    std::array<BastowFreqSlider* const, numFreqSliders> sliderArray;
      
     float level {0.0f};
    

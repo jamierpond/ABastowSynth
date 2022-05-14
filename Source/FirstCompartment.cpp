@@ -23,76 +23,51 @@
 #include "FirstCompartment.h"
 
 FirstCompartment::FirstCompartment(BastowSynthAudioProcessor& p) :
-audioProcessor(p)
+audioProcessor(p), sliderArray{&frequencySlider,
+                               &frequencySlider2,
+                               &frequencySlider3,
+                               &frequencySlider4,
+                               &frequencySlider5,
+                               &frequencySlider6,
+                               &frequencySlider7,
+                               &frequencySlider8,
+                               &originalFreq}
 {
     setAlwaysOnTop(true);
   
     //==============================================================================
                                 //Making Visible
     //==============================================================================
+    static const auto getFreqSliderColour = [this](int index)
+    {
+        static const std::vector<juce::Colour> colours = {red, orange, yellow, blue, limeGreen, offWhite, blue, red};
+        return colours[index];
+    };
     
-    addAndMakeVisible (&frequencySlider);
-    addAndMakeVisible (&frequencySlider2);
-    addAndMakeVisible (&frequencySlider3);
-    addAndMakeVisible (&frequencySlider4);
-    addAndMakeVisible (&frequencySlider5);
-    addAndMakeVisible (&frequencySlider6);
-    addAndMakeVisible (&frequencySlider7);
-    addAndMakeVisible (&frequencySlider8);
-    addAndMakeVisible (&originalFreq);
-    
-    //==============================================================================
-                                //Frequency Sliders
-    //==============================================================================
-    
-    originalFreq.addListener(this);
-    originalFreq.setColour(red);
-
-    frequencySlider.addListener(this);
-    frequencySlider.setColour(red);
-
-    frequencySlider2.addListener(this);
-    frequencySlider2.setColour(orange);
-    
-    frequencySlider3.addListener(this);
-    frequencySlider3.setColour(orange);
-    
-    frequencySlider4.addListener(this);
-    frequencySlider4.setColour(yellow);
-   
-    frequencySlider5.addListener(this);
-    frequencySlider5.setColour(blue);
-
-    frequencySlider6.addListener(this);
-    frequencySlider6.setColour(limeGreen);
-
-    frequencySlider7.addListener(this);
-    frequencySlider7.setColour(offWhite);
-    
-    frequencySlider8.addListener(this);
-    frequencySlider8.setColour(blue);
+    int index = 0;
+    for(auto* slider : sliderArray)
+    {
+        addAndMakeVisible(slider);
+        slider->addListener(this);
+        slider->setColour(getFreqSliderColour(index++));
+    }
     
     //==============================================================================
-                                //APVTS Slider Connection
-    //==============================================================================
+    using SliderAttachment = juce::AudioProcessorValueTreeState::SliderAttachment;
+    static const auto createSliderAttachment = [](juce::AudioProcessorValueTreeState& tree, std::unique_ptr<SliderAttachment>& attachment, juce::String paramID, juce::Slider& slider) {
+        attachment = std::make_unique<SliderAttachment>(tree, paramID, slider);
+    };
+    auto& apvts = audioProcessor.tree;
     
-    frequency1Val = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.tree, frequency1Id, frequencySlider);
-    
-    frequency2Val = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.tree, frequency2Id, frequencySlider2);
-    
-    frequency3Val = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.tree, frequency3Id, frequencySlider3);
-    
-    frequency4Val = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.tree, frequency4Id, frequencySlider4);
-    
-    frequency5Val = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.tree, frequency5Id, frequencySlider5);
-    
-    frequency6Val = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.tree, frequency6Id, frequencySlider6);
-    
-    frequency7Val = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.tree, frequency7Id, frequencySlider7);
-    
-    frequency8Val = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.tree, frequency8Id, frequencySlider8);
-    
-    gainOriginalVal = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.tree, gainOriginalId, originalFreq);
+    createSliderAttachment(apvts, frequency1Val, frequency1Id, frequencySlider);
+    createSliderAttachment(apvts, frequency2Val, frequency2Id, frequencySlider2);
+    createSliderAttachment(apvts, frequency3Val, frequency3Id, frequencySlider3);
+    createSliderAttachment(apvts, frequency4Val, frequency4Id, frequencySlider4);
+    createSliderAttachment(apvts, frequency5Val, frequency5Id, frequencySlider5);
+    createSliderAttachment(apvts, frequency6Val, frequency6Id, frequencySlider6);
+    createSliderAttachment(apvts, frequency7Val, frequency7Id, frequencySlider7);
+    createSliderAttachment(apvts, frequency8Val, frequency8Id, frequencySlider8);
+    createSliderAttachment(apvts, gainOriginalVal, gainOriginalId, originalFreq);
 }
 
 FirstCompartment::~FirstCompartment()

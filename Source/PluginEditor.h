@@ -30,13 +30,6 @@ Overrides any Pure Virtual Functions.
 #include "HorizontalSlider.h"
 #include "RotarySlider.h"
 #include "GainSliderLookAndFeel.h"
-#include "Freq2LAF.h"
-#include "Freq3LAF.h"
-#include "Freq4LAF.h"
-#include "Freq5LAF.h"
-#include "Freq6LAF.h"
-#include "Freq7LAF.h"
-#include "Freq8LAF.h"
 
 #include "MasterLAF.h"
 #include "OriginalFreqGain.h"
@@ -86,9 +79,6 @@ private:
     juce::Colour lightGrey = juce::Colour::fromFloatRGBA (0.74f, 0.76f, 0.76f, 1.0f);
     juce::Colour lightBlack = juce::Colour::fromFloatRGBA (0.13f, 0.13f, 0.13f, 1.0f);
     juce::Colour white = juce::Colour::fromFloatRGBA (1.0f, 1.0f, 1.0f, 1.0f);
-   
-  
-   
    
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (BastowSynthAudioProcessorEditor)

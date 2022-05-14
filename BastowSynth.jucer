@@ -30,28 +30,16 @@
                 file="Source/HorizontalLevelMeter.h"/>
         </GROUP>
         <GROUP id="{4E7F3D59-B507-B03A-A07D-B721553C68A2}" name="LookAndFeel">
+          <FILE id="QvQshl" name="GainSliderLookAndFeel.cpp" compile="1" resource="0"
+                file="Source/GainSliderLookAndFeel.cpp"/>
+          <FILE id="q7quAl" name="GainSliderLookAndFeel.h" compile="0" resource="0"
+                file="Source/GainSliderLookAndFeel.h"/>
           <FILE id="Oc3NpC" name="MasterLAF.cpp" compile="1" resource="0" file="Source/MasterLAF.cpp"/>
           <FILE id="DoiEgu" name="MasterLAF.h" compile="0" resource="0" file="Source/MasterLAF.h"/>
           <FILE id="rHSwtP" name="OriginalFreqGain.cpp" compile="1" resource="0"
                 file="Source/OriginalFreqGain.cpp"/>
           <FILE id="HQx0eJ" name="OriginalFreqGain.h" compile="0" resource="0"
                 file="Source/OriginalFreqGain.h"/>
-          <FILE id="CHhcII" name="Freq1LAF.cpp" compile="1" resource="0" file="Source/Freq1LAF.cpp"/>
-          <FILE id="A83oeV" name="Freq1LAF.h" compile="0" resource="0" file="Source/Freq1LAF.h"/>
-          <FILE id="qiH1QL" name="Freq2LAF.cpp" compile="1" resource="0" file="Source/Freq2LAF.cpp"/>
-          <FILE id="W5WWiV" name="Freq2LAF.h" compile="0" resource="0" file="Source/Freq2LAF.h"/>
-          <FILE id="MHm7dL" name="Freq3LAF.cpp" compile="1" resource="0" file="Source/Freq3LAF.cpp"/>
-          <FILE id="zdu3fv" name="Freq3LAF.h" compile="0" resource="0" file="Source/Freq3LAF.h"/>
-          <FILE id="CVaBub" name="Freq4LAF.cpp" compile="1" resource="0" file="Source/Freq4LAF.cpp"/>
-          <FILE id="fhaY1I" name="Freq4LAF.h" compile="0" resource="0" file="Source/Freq4LAF.h"/>
-          <FILE id="wbfsoM" name="Freq5LAF.cpp" compile="1" resource="0" file="Source/Freq5LAF.cpp"/>
-          <FILE id="HLO4CT" name="Freq5LAF.h" compile="0" resource="0" file="Source/Freq5LAF.h"/>
-          <FILE id="xk0M94" name="Freq6LAF.cpp" compile="1" resource="0" file="Source/Freq6LAF.cpp"/>
-          <FILE id="tIvGX7" name="Freq6LAF.h" compile="0" resource="0" file="Source/Freq6LAF.h"/>
-          <FILE id="dhhgHN" name="Freq7LAF.cpp" compile="1" resource="0" file="Source/Freq7LAF.cpp"/>
-          <FILE id="m0QxXA" name="Freq7LAF.h" compile="0" resource="0" file="Source/Freq7LAF.h"/>
-          <FILE id="W2MSyG" name="Freq8LAF.cpp" compile="1" resource="0" file="Source/Freq8LAF.cpp"/>
-          <FILE id="V2yO7p" name="Freq8LAF.h" compile="0" resource="0" file="Source/Freq8LAF.h"/>
         </GROUP>
         <GROUP id="{AFC01266-8DB9-409D-4163-C5EFFEAEBFB8}" name="Components">
           <FILE id="UjWgDw" name="FifthCompartment.cpp" compile="1" resource="0"
