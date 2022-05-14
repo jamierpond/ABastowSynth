@@ -19,11 +19,11 @@
 #pragma once
 #include <JuceHeader.h>
 
-class Freq1LAF : public juce::LookAndFeel_V4
+class GainSliderLookAndFeel : public juce::LookAndFeel_V4
 {
 public:
-    Freq1LAF();
-    ~Freq1LAF()override;
+    GainSliderLookAndFeel();
+    ~GainSliderLookAndFeel()override;
                             
     void drawLinearSlider (juce::Graphics& , int x, int y, int width, int height,
                            float sliderPos,
@@ -55,5 +55,5 @@ private:
     
     juce::Colour mainSliderColour = red;
    
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (Freq1LAF)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (GainSliderLookAndFeel)
 };

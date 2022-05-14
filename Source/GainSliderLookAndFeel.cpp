@@ -14,12 +14,12 @@
 ///                            (Kengo, S., 2021)
 ///                            (JUCE, Unknown)
 
-#include "Freq1LAF.h"
+#include "GainSliderLookAndFeel.h"
 
-Freq1LAF::Freq1LAF(){};
-Freq1LAF::~Freq1LAF(){};
+GainSliderLookAndFeel::GainSliderLookAndFeel(){};
+GainSliderLookAndFeel::~GainSliderLookAndFeel(){};
 
-void Freq1LAF::drawLinearSlider (juce::Graphics& g, int x, int y, int width, int height,
+void GainSliderLookAndFeel::drawLinearSlider (juce::Graphics& g, int x, int y, int width, int height,
                        float sliderPos,
                        float minSliderPos,
                        float maxSliderPos,

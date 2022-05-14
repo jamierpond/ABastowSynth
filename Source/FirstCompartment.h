@@ -22,14 +22,7 @@
 #include "HorizontalSlider.h"
 #include "VerticalSlider.h"
 #include "RotarySlider.h"
-#include "Freq1LAF.h"
-#include "Freq2LAF.h"
-#include "Freq3LAF.h"
-#include "Freq4LAF.h"
-#include "Freq5LAF.h"
-#include "Freq6LAF.h"
-#include "Freq7LAF.h"
-#include "Freq8LAF.h"
+#include "GainSliderLookAndFeel.h"
 #include "OriginalFreqGain.h"
 
 
@@ -61,7 +54,7 @@ public:
     
     
 private:
-    Freq1LAF lf;
+    GainSliderLookAndFeel lf;
 };
 
 
@@ -92,16 +85,6 @@ private:
                      frequencySlider7,
                      frequencySlider8,
                      originalFreq;
-    
-    Freq1LAF freq1LAF;
-    Freq2LAF freq2LAF;
-    Freq3LAF freq3LAF;
-    Freq4LAF freq4LAF;
-    Freq5LAF freq5LAF;
-    Freq6LAF freq6LAF;
-    Freq7LAF freq7LAF;
-    Freq8LAF freq8LAF;
-    OriginalFreqGainLAF  originalFreqLAF;
      
     float level {0.0f};
    

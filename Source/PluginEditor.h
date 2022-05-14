@@ -29,7 +29,7 @@ Overrides any Pure Virtual Functions.
 #include "VerticalSlider.h"
 #include "HorizontalSlider.h"
 #include "RotarySlider.h"
-#include "Freq1LAF.h"
+#include "GainSliderLookAndFeel.h"
 #include "Freq2LAF.h"
 #include "Freq3LAF.h"
 #include "Freq4LAF.h"
