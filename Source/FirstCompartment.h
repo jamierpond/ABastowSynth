@@ -33,6 +33,39 @@
 #include "OriginalFreqGain.h"
 
 
+class BastowFreqSlider : public juce::Slider
+{
+public:
+    
+    BastowFreqSlider()
+    {
+        setLookAndFeel(&lf);
+        setTextBoxStyle(juce::Slider::NoTextBox, false, 90, 0);
+        setPopupDisplayEnabled(true, false, this);
+        setTextValueSuffix(" St");
+        setVelocityBasedMode (true);
+        setVelocityModeParameters (0.15, 1, 0.5, false);
+        setSliderStyle(SliderStyle::LinearVertical);
+    }
+    
+    ~BastowFreqSlider()
+    {
+        // You have to do this because otherwise the lf will be deleted twice!
+        setLookAndFeel(nullptr);
+    }
+    
+    void setColour(juce::Colour colourToSet)
+    {
+        lf.setSliderColour(colourToSet);
+    }
+    
+    
+private:
+    Freq1LAF lf;
+};
+
+
+
 class FirstCompartment : public juce::Component,  public juce::Slider::Listener
 {
 public:
@@ -50,24 +83,24 @@ private:
     void sliderValueChanged(juce::Slider* slider) override;
     BastowSynthAudioProcessor& audioProcessor;
     
-    VerticalSlider FrequencySlider,
-    FrequencySlider2,
-    FrequencySlider3,
-    FrequencySlider4,
-    FrequencySlider5,
-    FrequencySlider6,
-    FrequencySlider7,
-    FrequencySlider8,
-    originalFreq;
+    BastowFreqSlider frequencySlider,
+                     frequencySlider2,
+                     frequencySlider3,
+                     frequencySlider4,
+                     frequencySlider5,
+                     frequencySlider6,
+                     frequencySlider7,
+                     frequencySlider8,
+                     originalFreq;
     
-    Freq1LAF   freq1LAF;
-    Freq2LAF   freq2LAF;
-    Freq3LAF   freq3LAF;
-    Freq4LAF   freq4LAF;
-    Freq5LAF   freq5LAF;
-    Freq6LAF   freq6LAF;
-    Freq7LAF   freq7LAF;
-    Freq8LAF   freq8LAF;
+    Freq1LAF freq1LAF;
+    Freq2LAF freq2LAF;
+    Freq3LAF freq3LAF;
+    Freq4LAF freq4LAF;
+    Freq5LAF freq5LAF;
+    Freq6LAF freq6LAF;
+    Freq7LAF freq7LAF;
+    Freq8LAF freq8LAF;
     OriginalFreqGainLAF  originalFreqLAF;
      
     float level {0.0f};

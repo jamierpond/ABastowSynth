@@ -31,6 +31,10 @@ public:
                            float maxSliderPos,
                            const juce::Slider::SliderStyle, juce::Slider&) override;
     
+    void setSliderColour(juce::Colour colourToUse)
+    {
+        mainSliderColour = colourToUse;
+    }
 
 private:
     //=============================================================================
@@ -48,6 +52,8 @@ private:
     juce::Colour offWhite = juce::Colour::fromFloatRGBA (0.83f, 0.83f, 0.89f, 1.0f);
     juce::Colour grey = juce::Colour::fromFloatRGBA (0.42f, 0.42f, 0.42f, 1.0f);
     juce::Colour blackGrey = juce::Colour::fromFloatRGBA (0.2f, 0.2f, 0.2f, 1.0f);
+    
+    juce::Colour mainSliderColour = red;
    
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (Freq1LAF)
 };

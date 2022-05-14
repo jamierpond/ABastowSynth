@@ -53,8 +53,6 @@ void Freq1LAF::drawLinearSlider (juce::Graphics& g, int x, int y, int width, int
     
     auto trackWidthFrequency1 = juce::jmin (8.5f, (float) height );
 
-    
-
     juce::Point<float> startPoint (slider.isHorizontal() ? (float) x : (float) x + (float) width * 0.5f,
                                    slider.isHorizontal() ? (float) y + (float) height * 0.5f : (float) (height + y));
 
@@ -65,7 +63,7 @@ void Freq1LAF::drawLinearSlider (juce::Graphics& g, int x, int y, int width, int
            track.startNewSubPath (startPoint);
            track.lineTo (endPoint);
     
-    g.setColour (red);
+    g.setColour (mainSliderColour);
    
     g.strokePath (track, { trackWidthFrequency1, juce::PathStrokeType::curved, juce::PathStrokeType::rounded });
     

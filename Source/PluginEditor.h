@@ -59,10 +59,7 @@ private:
     //==============================================================================
     void sliderValueChanged(juce::Slider* slider) override;
    
-
     BastowSynthAudioProcessor& audioProcessor;
-    
-    
 
     FirstCompartment component1;
     SecondCompartment component2;

@@ -64,7 +64,7 @@ void OriginalFreqGainLAF::drawLinearSlider (juce::Graphics& g, int x, int y, int
            track.startNewSubPath (startPoint);
            track.lineTo (endPoint);
     
-    g.setColour (grey);
+    g.setColour (mainSliderColour);
    
     g.strokePath (track, { trackWidthOriginal, juce::PathStrokeType::curved, juce::PathStrokeType::rounded });
     
@@ -152,3 +152,4 @@ int thumbBeingDragged = slider.getThumbBeingDragged();
                                                            .withCentre (x ? minPoint : maxPoint));
     
 }
+
