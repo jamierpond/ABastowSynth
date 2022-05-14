@@ -33,17 +33,20 @@ audioProcessor(p), sliderArray{&frequencySlider,
                                &frequencySlider8,
                                &originalFreq}
 {
-    setAlwaysOnTop(true);
-  
-    //==============================================================================
-                                //Making Visible
-    //==============================================================================
-    static const auto getFreqSliderColour = [this](int index)
-    {
+    // Some helper functions
+    static const auto getFreqSliderColour = [this](int index) {
         static const std::vector<juce::Colour> colours = {red, orange, yellow, blue, limeGreen, offWhite, blue, red};
         return colours[index];
     };
     
+    using SliderAttachment = juce::AudioProcessorValueTreeState::SliderAttachment;
+    static const auto createSliderAttachment = [](juce::AudioProcessorValueTreeState& tree, std::unique_ptr<SliderAttachment>& attachment, juce::String paramID, juce::Slider& slider) {
+        attachment = std::make_unique<SliderAttachment>(tree, paramID, slider);
+    };
+
+    setAlwaysOnTop(true);
+    
+    // Setup each slider with their colours etc.
     int index = 0;
     for(auto* slider : sliderArray)
     {
@@ -52,13 +55,8 @@ audioProcessor(p), sliderArray{&frequencySlider,
         slider->setColour(getFreqSliderColour(index++));
     }
     
-    //==============================================================================
-    using SliderAttachment = juce::AudioProcessorValueTreeState::SliderAttachment;
-    static const auto createSliderAttachment = [](juce::AudioProcessorValueTreeState& tree, std::unique_ptr<SliderAttachment>& attachment, juce::String paramID, juce::Slider& slider) {
-        attachment = std::make_unique<SliderAttachment>(tree, paramID, slider);
-    };
+    // You could also put this in the above for loop at some point, which would be tidy :) 
     auto& apvts = audioProcessor.tree;
-    
     createSliderAttachment(apvts, frequency1Val, frequency1Id, frequencySlider);
     createSliderAttachment(apvts, frequency2Val, frequency2Id, frequencySlider2);
     createSliderAttachment(apvts, frequency3Val, frequency3Id, frequencySlider3);
